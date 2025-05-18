@@ -1,0 +1,19 @@
+Package: scPOEM
+Type: Package
+Title: Single-Cell Meta-Path Based Omics EMbedding
+Version: 0.1.0
+Authors@R: c(person(given = "Yuntong", family = "Hou", email = "houyt223@gmail.com", role = c("aut","cre"), comment = c(ORCID = '0009-0005-0587-4692')),
+             person(given = "Yan", family = "Zhong", email = "yzhong@fem.ecnu.edu.cn", role = c("aut","ctb"), comment = c(ORCID = '0000-0003-2412-043X')))
+Author: 
+    Yuntong Hou [aut, cre] (https://orcid.org/0009-0005-0587-4692), 
+    Yan Zhong [aut, ctb] (https://orcid.org/0000-0003-2412-043X)
+Description: This package provides a workflow to jointly embed chromatin accessibility peaks and expressed genes into a shared low-dimensional space using single-cell ATAC-seq (scATAC-seq) and RNA-seq (scRNA-seq) data. It integrates regulatory relationships among peak-peak interactions (via Cicero), peak-gene interactions (using Lasso, random forest, and XGBoost), and gene-gene interactions (using principal component regression). Additionally, it supports the comparison of regulatory genes between two conditions through manifold alignment implemented in scTenifoldNet.
+URL: https://github.com/Houyt23/scPOEM
+BugReports: https://github.com/Houyt23/scPOEM/issues
+License: GPL (>= 2)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Imports:
+    methods, utils, stats, foreach, doParallel, tictoc, Matrix, glmnet, xgboost, reticulate, stringr, magrittr, monocle3, cicero, scTenifoldNet, SingleCellExperiment
+Depends: R (>= 3.5.0)
+RoxygenNote: 7.3.2
